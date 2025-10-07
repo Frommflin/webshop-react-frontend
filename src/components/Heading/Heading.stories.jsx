@@ -53,7 +53,7 @@ export const Heading1WithStyling = {
   args: {
     type: "h1",
     text: "This is a H1 with styling prop",
-    styles: {
+    styling: {
       color: "#74c",
       backgroundColor: "#000",
       width: "fit-content",
