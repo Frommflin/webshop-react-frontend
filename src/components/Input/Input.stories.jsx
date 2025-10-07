@@ -8,3 +8,19 @@ export default {
 export const Default = {
   args: {},
 };
+
+export const Testpasswordtype = {
+  args: {
+    type: "password",
+  },
+};
+
+export const DisabledField = {
+  args: {
+    placeholder: "Kan inte ändras",
+    type: "text",
+    disabled: true,
+    onChange: () => {},
+  },
+};
+
