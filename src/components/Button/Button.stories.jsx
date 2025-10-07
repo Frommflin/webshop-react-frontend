@@ -1,6 +1,8 @@
+import Button from "./Button.atom";
+
 export default {
   title: "Components/Button",
-  component: () => <h1>Empty story</h1>,
+  component: Button,
 };
 
 export const Default = {};
