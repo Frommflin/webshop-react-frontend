@@ -5,4 +5,22 @@ export default {
   component: Badge,
 };
 
-export const Default = {};
+export const Default = {
+  args: {
+    text: "-5%",
+  },
+};
+
+export const NewItem = {
+  args: {
+    text: "New",
+    variant: "new",
+  },
+};
+
+export const LargeSoldOut = {
+  args: {
+    text: "Sold out",
+    variant: ["sold-out", "large"],
+  },
+};
