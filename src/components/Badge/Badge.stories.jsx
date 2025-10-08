@@ -1,6 +1,8 @@
+import Badge from "./Badge.atom";
+
 export default {
   title: "Components/Badge",
-  component: () => <h1>Empty Story</h1>,
+  component: Badge,
 };
 
 export const Default = {};
