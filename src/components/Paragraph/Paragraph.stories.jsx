@@ -33,3 +33,8 @@ Large.args = {
   className: "large",
 };
 
+export const Highlight = Template.bind({});
+Highlight.args = {
+  text: "This is a highlighted paragraph — great for drawing attention to important information.",
+  className: "highlight",
+};
