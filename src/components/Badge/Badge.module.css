@@ -1,0 +1,30 @@
+.badge {
+  border: 1px solid #a1998b;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: fit-content;
+  min-width: 40px;
+  padding: 5px;
+  border-radius: 2rem;
+  background-color: #eee2cf;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+  cursor: default;
+}
+
+.large {
+  font-size: large;
+  padding: 0.5rem 1rem;
+}
+
+.new {
+  background-color: #b4d1ae;
+  color: #5a7a48;
+}
+
+.sold-out {
+  background-color: #b00020;
+  border-color: #550010;
+  color: #550010;
+}
