@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Paragraph.module.css";
 
-const Paragraph = ({ text, className = "", styling = {} }) => {
+const Paragraph = ({ text, styling = {} }) => {
   return (
-    <p className={`${styles.paragraph} ${className}`} style={styling}>
+    <p className={styles.paragraph} style={styling}>
       {text}
     </p>
   );
