@@ -1,40 +1,45 @@
-import React from "react";
 import Paragraph from "./Paragraph.atom";
 
 export default {
   title: "Components/Paragraph",
   component: Paragraph,
-  argTypes: {
-    text: { control: "text" },
-    className: { 
-      control: { type: "select" },
-      options: ["", "small", "large", "highlight"]
-    },
-    styling: { control: "object" },
+};
+
+export const Default = {
+  args: {
+    text: "This is a default paragraph. It uses the base styling.",
   },
 };
 
-const Template = (args) => <Paragraph {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  text: "This is a standard paragraph component. It uses a clean font size and spacing for readability.",
+export const Small = {
+  args: {
+    text: "This paragraph uses the 'small' class for smaller text.",
+    className: "small",
+  },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  text: "This paragraph uses the 'small' class.",
-  className: "small",
+export const Large = {
+  args: {
+    text: "This paragraph uses the 'large' class for bigger text.",
+    className: "large",
+  },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  text: "This paragraph uses the 'large' class.",
-  className: "large",
+export const Highlight = {
+  args: {
+    text: "This paragraph uses the 'highlight' class to draw attention.",
+    className: "highlight",
+  },
 };
 
-export const Highlight = Template.bind({});
-Highlight.args = {
-  text: "This is a highlighted paragraph — great for drawing attention to important information.",
-  className: "highlight",
+export const WithInlineStyling = {
+  args: {
+    text: "This paragraph has custom inline styling with green text and padding.",
+    styling: {
+      color: "green",
+      backgroundColor: "#f0f0f0",
+      padding: "10px",
+      borderRadius: "8px",
+    },
+  },
 };
