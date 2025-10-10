@@ -1,0 +1,10 @@
+.base {
+  padding: 0.2rem 0.6rem;
+  border: 1px dashed black;
+  width: fit-content;
+}
+
+.error {
+  border-color: red;
+  color: red;
+}
