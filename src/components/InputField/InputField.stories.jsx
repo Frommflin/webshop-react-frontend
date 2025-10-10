@@ -1,6 +1,8 @@
+import InputField from "./InputField.molecule";
+
 export default {
   title: "Components/InputField",
-  component: () => <h1>Empty story</h1>,
+  component: InputField,
 };
 
 export const Default = {};
