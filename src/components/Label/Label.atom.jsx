@@ -1,25 +1,19 @@
 import React from "react";
 import styles from "./Label.module.css";
 
-const Label = ({ text, htmlFor, className = "", type }) => {
-  let labelText = text;
+const Label = ({ text, htmlFor, type, styling = {} }) => {
+ 
+  const typeTextMap = {
+    email: "Email",
+    tel: "Telephone",
+    password: "Password",
+    address: "Address",
+  };
 
-  if (!labelText && type) {
-    switch (type) {
-      case "email":
-        labelText = "Email";
-        break;
-      case "tel":
-      case "telephone":
-        labelText = "Telephone";
-        break;
-      default:
-        labelText = "Label";
-    }
-  }
+  const labelText = text || typeTextMap[type] || "Label";
 
   return (
-    <label htmlFor={htmlFor} className={`${styles.label} ${className}`}>
+    <label htmlFor={htmlFor} className={styles.label} style={styling}>
       {labelText}
     </label>
   );
