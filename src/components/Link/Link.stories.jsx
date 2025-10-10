@@ -29,3 +29,15 @@ export const ExternalLink = {
     external: true,
   },
 };
+
+export const StyledLink = {
+  args: {
+    label: "Styled Link",
+    path: "/",
+    styling: {
+      color: "#77001a",
+      fontWeight: "bold",
+      textDecoration: "line-through",
+    },
+  },
+};
