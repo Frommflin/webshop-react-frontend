@@ -1,6 +1,8 @@
+import HelperText from "./HelperText.atom";
+
 export default {
   title: "Components/HelperText",
-  component: () => <h1>Empty story</h1>,
+  component: HelperText,
 };
 
 export const Default = {};
