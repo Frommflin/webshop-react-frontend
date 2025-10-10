@@ -4,40 +4,40 @@ import Label from "./Label.atom";
 export default {
   title: "Components/Label",
   component: Label,
-  argTypes: {
-    text: { control: "text" },
-    htmlFor: { control: "text" },
-    type: { 
-      control: { type: "select" },
-      options: ["text", "email", "tel", "password", "address", "custom"]
-    },
-    className: { control: "text" },
+};
+
+export const Default = {
+  args: {
+    text: "Full Name",
+    htmlFor: "name",
   },
 };
 
-const Template = (args) => <Label {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  text: "Full Name",
-  htmlFor: "name",
+export const Email = {
+  args: {
+    type: "email",
+    htmlFor: "email",
+  },
 };
 
-export const Email = Template.bind({});
-Email.args = {
-  type: "email",
-  htmlFor: "email",
+export const Telephone = {
+  args: {
+    type: "tel",
+    htmlFor: "phone",
+  },
 };
 
-export const Telephone = Template.bind({});
-Telephone.args = {
-  type: "tel",
-  htmlFor: "phone",
+export const Address = {
+  args: {
+    type: "address", 
+    htmlFor: "address",
+  },
 };
 
-export const Required = Template.bind({});
-Required.args = {
-  text: "Email",
-  htmlFor: "email",
-  className: "required",
+export const Required = {
+  args: {
+    text: "Email",
+    htmlFor: "email",
+    styling: { color: "red", fontWeight: "bold" },
+  },
 };
