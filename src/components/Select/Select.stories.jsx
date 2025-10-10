@@ -5,4 +5,12 @@ export default {
   component: Select,
 };
 
-export const Default = {};
+export const Default = {
+  args: {
+    selectName: "select1",
+    options: [
+      { label: "Option 1", value: "opt1" },
+      { label: "Option 2", value: "opt2" },
+    ],
+  },
+};
