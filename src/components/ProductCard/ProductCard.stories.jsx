@@ -1,6 +1,8 @@
+import ProductCard from "./ProductCard.molecule";
+
 export default {
   title: "Components/ProductCard",
-  component: () => <h1>Empty story</h1>,
+  component: ProductCard,
 };
 
 export const Default = {};
