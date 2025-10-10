@@ -1,6 +1,8 @@
+import Select from "./Select.atom";
+
 export default {
   title: "Components/Select",
-  component: () => <h1>Empty story</h1>,
+  component: Select,
 };
 
 export const Default = {};
