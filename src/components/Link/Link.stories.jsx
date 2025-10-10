@@ -1,6 +1,8 @@
+import Link from "./Link.atom";
+
 export default {
   title: "Components/Link",
-  component: () => <h1>Empty story</h1>,
+  component: Link,
 };
 
 export const Default = {};
