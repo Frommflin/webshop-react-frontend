@@ -1,6 +1,8 @@
+import Footer from "./Footer.molecule";
+
 export default {
   title: "Components/Footer",
-  component: () => <h1>Empty story</h1>,
+  component: Footer,
 };
 
 export const Default = {};
