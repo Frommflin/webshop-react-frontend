@@ -6,3 +6,12 @@ export default {
 };
 
 export const Default = {};
+
+export const StyledFooter = {
+  args: {
+    styling: {
+      color: "rgba(255,255,255,.7)",
+      backgroundColor: "#002d35",
+    },
+  },
+};
