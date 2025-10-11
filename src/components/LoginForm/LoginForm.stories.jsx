@@ -1,6 +1,8 @@
+import LoginForm from "./LoginForm.organism";
+
 export default {
   title: "Components/LoginForm",
-  component: () => <h1>Empty story</h1>,
+  component: LoginForm,
 };
 
 export const Default = {};
