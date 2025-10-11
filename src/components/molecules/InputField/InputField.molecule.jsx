@@ -1,6 +1,6 @@
 import React from "react";
-import Label from "../../atoms/Label/Label.atom";
-import Input from "../../atoms/Input/Input.atom";
+import Label from "@/components/atoms/Label/Label.atom";
+import Input from "@/components/atoms/Input/Input.atom";
 
 const InputField = ({
   label,

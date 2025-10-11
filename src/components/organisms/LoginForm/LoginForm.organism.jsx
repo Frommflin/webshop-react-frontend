@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
-import Heading from "../../atoms/Heading/Heading.atom";
-import InputField from "../../molecules/InputField/InputField.molecule";
-import Button from "../../atoms/Button/Button.atom";
+import InputField from "@/components/molecules/InputField/InputField.molecule";
+import Heading from "@/components/atoms/Heading/Heading.atom";
+import Button from "@/components/atoms/Button/Button.atom";
 
 const LoginForm = ({ onSubmit }) => {
   const [user, setUser] = useState({

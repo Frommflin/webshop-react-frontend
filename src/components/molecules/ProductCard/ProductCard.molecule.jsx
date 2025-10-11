@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
-import Heading from "../../atoms/Heading/Heading.atom";
-import Image from "../../atoms/Image/Image.atom";
-import PriceText from "../../atoms/PriceText/PriceText.atom";
-import Paragraph from "../../atoms/Paragraph/Paragraph.atom";
-import Badge from "../../atoms/Badge/Badge.atom";
+import Heading from "@/components/atoms/Heading/Heading.atom";
+import Image from "@/components/atoms/Image/Image.atom";
+import PriceText from "@/components/atoms/PriceText/PriceText.atom";
+import Paragraph from "@/components/atoms/Paragraph/Paragraph.atom";
+import Badge from "@/components/atoms/Badge/Badge.atom";
 
 const ProductCard = ({
   imgPath,
