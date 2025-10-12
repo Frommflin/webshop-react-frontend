@@ -1,6 +1,8 @@
+import RegisterForm from "./RegisterForm.organism";
+
 export default {
   title: "Components/Organisms/RegisterForm",
-  component: () => <h1>Empty story</h1>,
+  component: RegisterForm,
 };
 
 export const Default = {};
