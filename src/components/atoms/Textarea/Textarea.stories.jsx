@@ -1,6 +1,8 @@
+import Textarea from "./Textarea.atom";
+
 export default {
   title: "Components/Atoms/Textarea",
-  component: () => <h1>Empty story</h1>,
+  component: Textarea,
 };
 
 export const Default = {};
