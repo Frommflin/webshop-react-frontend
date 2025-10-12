@@ -6,3 +6,18 @@ export default {
 };
 
 export const Default = {};
+
+export const Vertical = {
+  args: {
+    direction: "vertical",
+  },
+};
+
+export const Styled = {
+  args: {
+    styling: {
+      borderColor: "#0aa",
+      width: "50%",
+    },
+  },
+};
