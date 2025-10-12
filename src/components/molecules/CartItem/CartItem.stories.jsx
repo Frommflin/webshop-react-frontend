@@ -12,9 +12,9 @@ const Template = (args) => {
 
   const handleIncrement = () => setQuantity((q) => q + 1);
   const handleDecrement = () => setQuantity((q) => (q > 1 ? q - 1 : q));
-  const handleRemove = () => setVisible(false); // 👈 remove the item
+  const handleRemove = () => setVisible(false); 
 
-  if (!visible) return null; // 👈 stop rendering the CartItem
+  if (!visible) return null; 
 
   return (
     <CartItem

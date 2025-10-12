@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CartItem.module.css";
-import Button from "../Button/Button.atom";
-import PriceText from "../PriceText/PriceText.atom";
+import Button from "../../atoms/Button/Button.atom";
+import PriceText from "../../atoms/PriceText/PriceText.atom";
 
 const CartItem = ({
   productId,
