@@ -9,6 +9,7 @@ export const Default = {
   args: {
     name: "textarea1",
     placeholder: "This is a textarea",
+    onChange: (e) => console.log(`Value has changed to ${e.target.value}`),
   },
 };
 
@@ -22,5 +23,6 @@ export const Styled = {
       borderColor: "#0080ff",
       color: "#0080ff",
     },
+    onChange: (e) => console.log(`Value has changed to ${e.target.value}`),
   },
 };

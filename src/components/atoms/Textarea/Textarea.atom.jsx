@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "./Textarea.module.css";
 
-const Textarea = ({ name, text, placeholder, required, styling = {} }) => {
+const Textarea = ({
+  name,
+  text,
+  placeholder,
+  required,
+  onChange,
+  styling = {},
+}) => {
   return (
     <textarea
       name={name}
@@ -10,6 +17,7 @@ const Textarea = ({ name, text, placeholder, required, styling = {} }) => {
       required={required}
       className={styles.field}
       style={styling}
+      onChange={onChange}
     >
       {text}
     </textarea>
