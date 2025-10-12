@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CheckBox from "./CheckBox.atom";
 
 export default {
-  title: "Components/CheckBox",
+  title: "Components/Atoms/CheckBox",
   component: CheckBox,
   argTypes: {
     label: { control: "text" },
