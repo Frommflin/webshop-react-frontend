@@ -1,0 +1,25 @@
+@import "../../../variables.css";
+
+.btn {
+  height: var(--btn-height);
+  background-color: #3498db;
+  color: white;
+  border: 1px inset #2980b9;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn img,
+.btn svg {
+  height: calc(var(--btn-height) * var(--icon-scale));
+  width: auto;
+}
