@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CartItem from "./CartItem.molecule";
 
 export default {
-  title: "Molecules/CartItem",
+  title: "Components/molecules/CartItem",
   component: CartItem,
 };
 
