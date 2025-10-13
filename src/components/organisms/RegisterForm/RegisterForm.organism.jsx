@@ -1,7 +1,7 @@
 import Heading from "@/components/atoms/Heading/Heading.atom";
 import HelperText from "@/components/atoms/HelperText/HelperText.atom";
 import InputField from "@/components/molecules/InputField/InputField.molecule";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./RegisterForm.module.css";
 import Button from "@/components/atoms/Button/Button.atom";
 
@@ -11,7 +11,17 @@ const RegisterForm = ({ onSubmit }) => {
     email: "",
     password: "",
   });
+  const [pwd, setPwd] = useState("");
   const [error, setError] = useState(null);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    let validForm =
+      user.username != "" && user.email != "" && user.password != ""
+        ? false
+        : true;
+    setIsDisabled(validForm);
+  }, [user]);
 
   const onUsernameChange = (input) => {
     setUser({
@@ -26,42 +36,50 @@ const RegisterForm = ({ onSubmit }) => {
     });
   };
   const onPasswordChange = (input) => {
-    setUser({
-      ...user,
-      password: input,
-    });
+    setPwd(input);
   };
   const checkPasswordMatch = (input) => {
-    const check = input === user.password ? null : "Lösenorden måste matcha";
-    setError(check);
+    if (input === pwd) {
+      setError(null);
+      setUser({
+        ...user,
+        password: input,
+      });
+    } else {
+      setError("Lösenorden måste matcha");
+      setUser({
+        ...user,
+        password: "",
+      });
+    }
   };
 
   return (
     <form className={styles.form}>
       <Heading type="h2" text="Registrera nytt konto" />
       <InputField
-        label="Användarnamn"
+        label="Användarnamn *"
         inputId="usrname"
         type="text"
         placeholder="Användarnamn"
         onChange={(e) => onUsernameChange(e.target.value)}
       />
       <InputField
-        label="E-mail"
+        label="E-mail *"
         inputId="useremail"
         type="email"
         placeholder="example@example.com"
         onChange={(e) => onEmailChange(e.target.value)}
       />
       <InputField
-        label="Lösenord"
+        label="Lösenord *"
         inputId="pwd"
         type="password"
         placeholder="******"
         onChange={(e) => onPasswordChange(e.target.value)}
       />
       <InputField
-        label="Bekräfta lösenord"
+        label="Bekräfta lösenord *"
         inputId="confirmpwd"
         type="password"
         placeholder="******"
@@ -76,6 +94,7 @@ const RegisterForm = ({ onSubmit }) => {
       )}
       <Button
         label="Skapa konto"
+        isDisabled={isDisabled}
         styling={{
           width: "fit-content",
         }}
