@@ -1,6 +1,8 @@
+import ProductDisplay from "./ProductDisplay.organism";
+
 export default {
   title: "Components/Organisms/ProductDisplay",
-  component: () => <h1>Empty story</h1>,
+  component: ProductDisplay,
 };
 
 export const Default = {};
