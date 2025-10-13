@@ -2,18 +2,27 @@
 
 .btn {
   height: var(--btn-height);
-  background-color: #3498db;
   color: white;
-  border: 1px inset #2980b9;
+  border: 1px inset;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
 }
 
-.btn:hover {
+.disabled {
+  background-color: #858585;
+  border-color: #5c5c5c;
+  cursor: default;
+}
+
+.active {
+  background-color: #3498db;
+  border-color: #2980b9;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.active:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
