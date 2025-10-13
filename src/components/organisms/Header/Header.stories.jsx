@@ -1,16 +1,11 @@
 import { MemoryRouter } from "react-router-dom";
 import Header from "./Header.organism";
+import { withRouter } from "@sb/decorators";
 
 export default {
   title: "Components/Organisms/Header",
   component: Header,
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
+  decorators: [withRouter],
 };
 
 export const Default = {

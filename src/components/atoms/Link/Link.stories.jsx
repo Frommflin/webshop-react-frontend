@@ -1,18 +1,10 @@
-import { MemoryRouter } from "react-router-dom";
 import Link from "./Link.atom";
+import { withRouter } from "@sb/decorators";
 
 export default {
   title: "Components/Atoms/Link",
   component: Link,
-  decorators: [
-    (Story) => {
-      return (
-        <MemoryRouter>
-          <Story />
-        </MemoryRouter>
-      );
-    },
-  ],
+  decorators: [withRouter],
 };
 
 export const Default = {
