@@ -67,3 +67,11 @@ export const StyledWithIconAndLabel = {
     },
   },
 };
+
+export const Disabled = {
+  args: {
+    label: "Disabled button",
+    isDisabled: true,
+    onClick: () => alert("This alert should never be seen"),
+  },
+};
