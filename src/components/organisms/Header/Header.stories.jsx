@@ -1,6 +1,8 @@
+import Header from "./Header.organism";
+
 export default {
   title: "Components/Organisms/Header",
-  component: () => <h1>Empty story</h1>,
+  component: Header,
 };
 
 export const Default = {};
