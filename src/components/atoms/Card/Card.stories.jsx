@@ -1,6 +1,8 @@
+import Card from "./Card.atom";
+
 export default {
   title: "Components/Atoms/Card",
-  component: () => <h1>Empty story</h1>,
+  component: Card,
 };
 
 export const Default = {};
