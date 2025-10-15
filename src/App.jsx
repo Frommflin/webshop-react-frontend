@@ -1,7 +1,9 @@
+import Home from "./pages/Home/Home.page";
+
 function App() {
   return (
     <>
-      <h1>Webshop Project</h1>
+      <Home />
     </>
   );
 }
