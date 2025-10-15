@@ -13,7 +13,7 @@ const InputField = ({
   validationClass,
 }) => {
   return (
-    <>
+    <div>
       <Label text={label} htmlFor={inputId} />
       <Input
         id={inputId}
@@ -24,7 +24,7 @@ const InputField = ({
         disabled={disabled}
         variant={validationClass}
       />
-    </>
+    </div>
   );
 };
 
