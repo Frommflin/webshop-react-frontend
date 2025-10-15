@@ -36,7 +36,7 @@ const LoginForm = ({ onSubmit }) => {
         label="Lösenord"
         inputId="pwd"
         type="password"
-        placeholder="Lösenord"
+        placeholder="******"
         onChange={(e) => onPasswordChange(e.target.value)}
       />
       <Button
