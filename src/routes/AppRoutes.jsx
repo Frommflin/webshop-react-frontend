@@ -6,20 +6,78 @@ import Login from "@/pages/Login/Login.page";
 import ProductDetails from "@/pages/ProductDetails/ProductDetails.page";
 import Products from "@/pages/Products/Products.page";
 import Register from "@/pages/Register/Register.page";
+import Layout from "@/templates/Layout.template";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/signin" element={<Login />} />
-      <Route exact path="/account" element={<Account />} />
-      <Route exact path="/cart" element={<CustomerCart />} />
-      <Route exact path="/checkout" element={<Checkout />} />
-      <Route exact path="/products" element={<Products />} />
-      <Route exact path="/product/:id" element={<ProductDetails />} />
+      <Route
+        exact
+        path="/"
+        element={
+          <Layout>
+            <Home />
+          </Layout>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <Layout>
+            <Register />
+          </Layout>
+        }
+      />
+      <Route
+        path="/signin"
+        element={
+          <Layout>
+            <Login />
+          </Layout>
+        }
+      />
+      <Route
+        path="/account"
+        element={
+          <Layout>
+            <Account />
+          </Layout>
+        }
+      />
+      <Route
+        path="/cart"
+        element={
+          <Layout>
+            <CustomerCart />
+          </Layout>
+        }
+      />
+      <Route
+        path="/checkout"
+        element={
+          <Layout>
+            <Checkout />
+          </Layout>
+        }
+      />
+      <Route
+        path="/products"
+        element={
+          <Layout>
+            <Products />
+          </Layout>
+        }
+      />
+      <Route
+        path="/product/:id"
+        element={
+          <Layout>
+            <ProductDetails />
+          </Layout>
+        }
+      />
     </Routes>
   );
 };
