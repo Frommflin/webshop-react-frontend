@@ -1,3 +1,4 @@
+import { useState } from "react";
 import InputField from "./InputField.molecule";
 
 export default {
@@ -25,4 +26,21 @@ export const PasswordInput = {
     placeholder: "Enter password",
     onChange: (e) => console.log(e.target.value),
   },
+};
+
+export const InputWithValidation = () => {
+  const [error, setError] = useState("");
+
+  return (
+    <InputField
+      label="Enter text"
+      inputId="validate"
+      type="text"
+      placeholder="Example"
+      validationClass={error}
+      onChange={(e) => {
+        e.target.value == "" ? setError("error") : setError("");
+      }}
+    />
+  );
 };
