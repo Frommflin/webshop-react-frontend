@@ -1,7 +1,17 @@
+import Card from "@/components/atoms/Card/Card.atom";
+import RegisterForm from "@/components/organisms/RegisterForm/RegisterForm.organism";
 import React from "react";
 
 const Register = () => {
-  return <div>Skapa konto</div>;
+  const handleSubmit = () => {
+    alert("Account created!");
+  };
+
+  return (
+    <Card classnames="formCard">
+      <RegisterForm onSubmit={handleSubmit} />
+    </Card>
+  );
 };
 
 export default Register;
