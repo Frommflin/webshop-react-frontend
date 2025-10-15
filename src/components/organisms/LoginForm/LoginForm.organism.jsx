@@ -9,17 +9,28 @@ const LoginForm = ({ onSubmit }) => {
     username: "",
     password: "",
   });
+
+  const [errors, setErrors] = useState({
+    username: "",
+    password: "",
+  });
+
   const onUsernameChange = (name) => {
     setUser({
       ...user,
       username: name,
     });
+    const error = name == "" ? "error" : "";
+    setErrors({ ...errors, username: error });
   };
   const onPasswordChange = (pwd) => {
     setUser({
       ...user,
       password: pwd,
     });
+
+    const error = pwd == "" ? "error" : "";
+    setErrors({ ...errors, password: error });
   };
 
   return (
@@ -30,13 +41,15 @@ const LoginForm = ({ onSubmit }) => {
         inputId="username"
         type="text"
         placeholder="Användarnamn"
+        validationClass={errors.username}
         onChange={(e) => onUsernameChange(e.target.value)}
       />
       <InputField
         label="Lösenord"
         inputId="pwd"
         type="password"
-        placeholder="Lösenord"
+        placeholder="******"
+        validationClass={errors.password}
         onChange={(e) => onPasswordChange(e.target.value)}
       />
       <Button

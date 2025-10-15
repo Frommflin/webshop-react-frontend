@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Input from "./Input.atom";
 
 export default {
@@ -22,4 +23,20 @@ export const DisabledField = {
     disabled: true,
     onChange: () => {},
   },
+};
+
+export const ValidationField = () => {
+  const [error, setError] = useState("");
+
+  return (
+    <Input
+      id="validation"
+      placeholder="Värde måste anges"
+      type="text"
+      variant={error}
+      onChange={(e) => {
+        e.target.value == "" ? setError("error") : setError("");
+      }}
+    />
+  );
 };

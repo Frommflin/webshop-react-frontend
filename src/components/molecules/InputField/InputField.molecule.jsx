@@ -10,16 +10,19 @@ const InputField = ({
   placeholder,
   disabled,
   onChange,
+  validationClass,
 }) => {
   return (
     <div>
       <Label text={label} htmlFor={inputId} />
       <Input
+        id={inputId}
         type={type}
         value={value}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
+        variant={validationClass}
       />
     </div>
   );
