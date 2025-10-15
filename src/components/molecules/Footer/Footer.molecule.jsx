@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.css";
 
-const Footer = ({ styling = {} }) => {
+const Footer = ({ classnames, styling = {} }) => {
   return (
-    <div className={styles.footer} style={styling}>
+    <div className={`${styles.footer} ${classnames}`} style={styling}>
       Webshop footer
     </div>
   );
