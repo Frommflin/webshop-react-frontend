@@ -1,0 +1,9 @@
+.inputField {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+}
+
+.error {
+  border: 1px solid #ff0000;
+}
