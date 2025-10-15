@@ -14,6 +14,12 @@ const RegisterForm = ({ onSubmit }) => {
   const [pwd, setPwd] = useState("");
   const [error, setError] = useState(null);
   const [isDisabled, setIsDisabled] = useState(true);
+  const [errors, setErrors] = useState({
+    username: "",
+    email: "",
+    password1: "",
+    password2: "",
+  });
 
   useEffect(() => {
     let validForm =
@@ -28,15 +34,24 @@ const RegisterForm = ({ onSubmit }) => {
       ...user,
       username: input,
     });
+
+    const validation = input == "" ? "error" : "";
+    setErrors({ ...errors, username: validation });
   };
   const onEmailChange = (input) => {
     setUser({
       ...user,
       email: input,
     });
+
+    const validation = input == "" ? "error" : "";
+    setErrors({ ...errors, email: validation });
   };
   const onPasswordChange = (input) => {
     setPwd(input);
+
+    const validation = input == "" ? "error" : "";
+    setErrors({ ...errors, password1: validation });
   };
   const checkPasswordMatch = (input) => {
     if (input === pwd) {
@@ -52,6 +67,9 @@ const RegisterForm = ({ onSubmit }) => {
         password: "",
       });
     }
+
+    const validation = input == "" ? "error" : "";
+    setErrors({ ...errors, password2: validation });
   };
 
   return (
@@ -59,9 +77,10 @@ const RegisterForm = ({ onSubmit }) => {
       <Heading type="h2" text="Registrera nytt konto" />
       <InputField
         label="Användarnamn *"
-        inputId="usrname"
+        inputId="username"
         type="text"
         placeholder="Användarnamn"
+        validationClass={errors.username}
         onChange={(e) => onUsernameChange(e.target.value)}
       />
       <InputField
@@ -69,6 +88,7 @@ const RegisterForm = ({ onSubmit }) => {
         inputId="useremail"
         type="email"
         placeholder="example@example.com"
+        validationClass={errors.email}
         onChange={(e) => onEmailChange(e.target.value)}
       />
       <InputField
@@ -76,6 +96,7 @@ const RegisterForm = ({ onSubmit }) => {
         inputId="pwd"
         type="password"
         placeholder="******"
+        validationClass={errors.password1}
         onChange={(e) => onPasswordChange(e.target.value)}
       />
       <InputField
@@ -83,6 +104,7 @@ const RegisterForm = ({ onSubmit }) => {
         inputId="confirmpwd"
         type="password"
         placeholder="******"
+        validationClass={errors.password2}
         onChange={(e) => checkPasswordMatch(e.target.value)}
       />
       {error && (
