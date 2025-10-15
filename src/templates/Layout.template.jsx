@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     <div className={styles.page}>
       <Header title="WebbShop!" links={pages} />
       <div className={styles.main}>{children}</div>
-      <Footer classnames={styles.footerLayout} />
+      <Footer />
     </div>
   );
 };
