@@ -13,9 +13,16 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:unit": "vitest --project unit",
+    "test:sb": "vitest --project storybook",
+    "test:cov": "vitest --project unit --coverage",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
+    "dompurify": "^3.3.0",
+    "jsdom": "^27.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4"
