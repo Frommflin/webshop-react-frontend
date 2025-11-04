@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ShoppingCart.module.css";
-import Button from "../../atoms/Button/Button.atom";
-import Paragraph from "../../atoms/Paragraph/Paragraph.atom";
-import PriceText from "../../atoms/PriceText/PriceText.atom";
-import Badge from "../../atoms/Badge/Badge.atom";
-import CartItem from "../../molecules/CartItem/CartItem.molecule";
+import Button from "@/components/atoms/Button/Button.atom";
+import Paragraph from "@/components/atoms/Paragraph/Paragraph.atom";
+import PriceText from "@/components/atoms/PriceText/PriceText.atom";
+import Badge from "@/components/atoms/Badge/Badge.atom";
+import CartItem from "@/components/molecules/CartItem/CartItem.molecule";
 
 const ShoppingCart = ({
   cartItems = [],
