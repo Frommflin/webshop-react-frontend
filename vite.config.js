@@ -10,12 +10,7 @@ const dirname =
     : path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  plugins: [
-    react(),
-    storybookTest({
-      configDir: path.join(dirname, ".storybook"),
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(dirname, "./src"),
@@ -28,19 +23,26 @@ export default defineConfig({
         test: {
           name: "unit",
           environment: "jsdom",
-          include: ["src/**/*.{test,spec}.{js,jsx,ts,tsx}"],
+          include: ["src/**/*.{test,spec}.js"],
           setupFiles: ["tests/setup.js"],
         },
       },
+
       {
+        plugins: [
+          storybookTest({
+            configDir: path.join(dirname, ".storybook"),
+          }),
+        ],
         test: {
           name: "storybook",
-          environment: "jsdom",
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: "playwright",
+            instances: [{ browser: "chromium" }],
+          },
           setupFiles: [".storybook/vitest.setup.js"],
-          include: [
-            "src/**/*.stories.@(js|jsx|ts|tsx)",
-            "src/**/*.{stories.test,stories.spec}.{js,jsx,ts,tsx}",
-          ],
         },
       },
     ],
