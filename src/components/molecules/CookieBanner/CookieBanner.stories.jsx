@@ -5,4 +5,8 @@ export default {
   component: CookieBanner,
 };
 
-export const Default = {};
+export const Default = {
+  args: {
+    onClick: () => console.log("Cookies accepted"),
+  },
+};
