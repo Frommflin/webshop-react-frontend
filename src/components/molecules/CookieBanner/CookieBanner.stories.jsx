@@ -1,6 +1,8 @@
+import CookieBanner from "./CookieBanner.molecule";
+
 export default {
   title: "Components/Molecules/CookieBanner",
-  component: () => <h1>Empty story</h1>,
+  component: CookieBanner,
 };
 
 export const Default = {};
