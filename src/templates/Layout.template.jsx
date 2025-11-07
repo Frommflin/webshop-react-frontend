@@ -3,6 +3,7 @@ import Header from "@/components/organisms/Header/Header.organism";
 import React from "react";
 import styles from "./Layout.module.css";
 import CookieBanner from "@/components/molecules/CookieBanner/CookieBanner.molecule";
+import CookieToggler from "@/components/organisms/CookieToggler/CookieToggler.organism";
 
 const Layout = ({ children }) => {
   const pages = [
@@ -19,6 +20,18 @@ const Layout = ({ children }) => {
     console.log("Cookies has been accepted");
     // TODO: Send consent to auth backend
   };
+  const handleCookieRemoval = () => {
+    console.log("Cookie consent has been removed");
+    // TODO: Remove cookie consent
+  };
+  const handleDataRequest = () => {
+    console.log("Stored userdata has been requested");
+    // TODO: Retrieve data about user in readable format
+  };
+  const handleDataRemoval = () => {
+    console.log("Stored userdata has been removed");
+    // TODO: Remove stored data related to user
+  };
   return (
     <div className={styles.page}>
       <Header title="WebbShop!" links={pages} />
@@ -26,6 +39,12 @@ const Layout = ({ children }) => {
       <CookieBanner
         onClick={handleCookieAccept}
         styling={{ marginBottom: "4rem" }}
+      />
+      <CookieToggler
+        onAccept={handleCookieAccept}
+        onRemoveCookies={handleCookieRemoval}
+        onDataAccessRequest={handleDataRequest}
+        onRemoveUserData={handleDataRemoval}
       />
       <Footer />
     </div>
