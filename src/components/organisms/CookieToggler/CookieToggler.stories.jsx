@@ -1,6 +1,8 @@
+import CookieToggler from "./CookieToggler.organism";
+
 export default {
   title: "Components/Organisms/CookieToggler",
-  component: () => <h1>Empty story</h1>,
+  component: CookieToggler,
 };
 
 export const Default = {};
